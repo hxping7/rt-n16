@@ -1,0 +1,17 @@
+#summary For newbies: How to enable telnet in router
+
+= Introduction =
+
+You can master RT-N16 via command line by telnet. Unfortunately, ssh is not supported by default firmware, so we will start from telnet. The difference between telnet and ssh is that telnet sends data in plain text, i.e. it is not encrypted, thus it is unsafe to use telnet via internet: packets can be seen by anyone.
+
+Basically you need to do two things to control your router via telnet: 
+
+1. To enable telnet in router user interface
+
+2. To download a telnet client like putty: http://www.putty.org/ on your Windows machine
+
+= Details =
+
+1. Login to your router web interface: http://192.168.1.1 using user name as admin and password to whatever you use (default is admin). Click Advanced and go to LAN page. Enable  checkbox on "telned" option and click Apply.
+
+2. Pickup any telnet client you want. I reccomend putty: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html . The interface is easy and intuitive. Open putty.exe, enter router ip: the default one is 192.168.1.1 and specify Telnet checkbox. Press Open button.
