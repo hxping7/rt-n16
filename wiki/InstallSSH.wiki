@@ -1,0 +1,9 @@
+(draft)
+
+#summary This section describes how to install SSH server on Asus RT-N16 (original firmware)
+
+= Introduction =
+
+Because filesystem is readonly you would require a USB flash drive.
+
+= Details =
