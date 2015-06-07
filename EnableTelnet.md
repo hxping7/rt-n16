@@ -1,0 +1,39 @@
+# Introduction #
+
+You can master RT-N16 via command line by telnet. Unfortunately, ssh is not supported by default firmware, so we will start from telnet. The difference between telnet and ssh is that telnet sends data in plain text, i.e. it is not encrypted, thus it is unsafe to use telnet via internet: packets can be seen by anyone.
+
+Basically you need to do two things to control your router via telnet:
+
+1. To enable telnet in router user interface
+
+2. To download a telnet client like putty: http://www.putty.org/ on your Windows machine
+
+# Details #
+
+1. Login to your router web interface: http://192.168.1.1 using user name as admin and password to whatever you use (default is admin). Click Advanced and go to LAN page. Enable  checkbox on "telned" option and click Apply. See screenshot:
+
+http://rt-n16.googlecode.com/files/enabletelnet.JPG
+
+2. Pickup any telnet client you want. I reccomend putty: http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html . The interface is easy and intuitive. Open putty.exe, enter router ip: the default one is 192.168.1.1 and specify Telnet checkbox. Press Open button and pass admin as user name and password whatever you use. Default is admin.
+
+After you logon you can type uname -a and see the output of your router:
+
+```
+volodymyr@sv1:~/development$ telnet 192.168.1.1
+Trying 192.168.1.1...
+Connected to 192.168.1.1.
+Escape character is '^]'.
+
+RT-E0CB4E87B123 login: admin
+Password:
+
+BusyBox v1.7.2 (2010-03-30 18:37:16 CST) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+# uname -a
+Linux RT-E0CB4E87B123 2.6.22 #6 Wed Mar 31 18:56:47 CST 2010 mips unknown
+```
+
+Here is the nice  looking screenshot:
+
+http://rt-n16.googlecode.com/files/telnetscreen.JPG
